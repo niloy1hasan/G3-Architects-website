@@ -5,7 +5,17 @@
 
 /* shared style */
 
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 /* dark 2 */
+
+.primary-color {
+    color: #FF900E;
+}
+
 .text-gray {
     color: #424242;
 }
@@ -21,7 +31,7 @@
 
 .primary-btn {
     background-color: #FF900E;
-    padding: 12px 18px;
+    padding: 15px 20px;
     color: white;
     font-weight: 600;
     border-radius: 5px;
@@ -30,6 +40,16 @@
     border: none;
     margin-top: 20px;
 }
+
+.font-normal {
+    font-weight: 500 !important;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
 
 /* header style */
 header {
@@ -44,12 +64,12 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 .banner-content {
     max-width: 850px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+    margin: 50px auto;
 }
 
 .banner-title {
@@ -95,6 +115,84 @@ nav {
 }
 
 
+/*---------- main section -----------*/
+
+/* team section */
+
+.team-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.team-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    flex: 1;
+}
+
+.team-content {
+    flex: 1;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+/* fact section */
+
+.fact-section {
+    width: 80% ;
+    margin: 0 auto;
+}
+
+.fact-box {
+    display: grid;
+    grid-template-columns: repeat(4, auto);   
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0; 
+}
+
+.fact-item {
+    border: solid 1px #FF900E;
+    border-radius: 8px;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fact-content {
+    width: 45%;
+}
+
+
+.fact-item > img {
+    width: 35px;
+    height: 35px;
+}
+
+.fact-tag {
+    font-size: 1.5rem;
+}
+
+.fact-item-description {
+    font-weight: 600;
+}
+
+
+
 /* Responsive Media Query */
 
 /* header section */
@@ -102,5 +200,55 @@ nav {
 @media screen and (max-width: 576px) {
     nav, .nav-link {
         flex-direction: column;
+    }
+
+    /* team section */
+
+    .team-section {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .team-image-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team-content {
+        text-align: center;
+        margin: 0 15px;
+    }
+
+
+    /* fact section */
+
+    .fact-box {
+        grid-template-columns: repeat(1, auto);
+        gap: 20px;
+    }
+
+    .fact-content {
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+/* medium size device */
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .team-section {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .team-content {
+        text-align: center;
+        margin: 0 15px;
+    }
+
+    .fact-box {
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+        justify-content: center;
     }
 }
