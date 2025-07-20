@@ -192,6 +192,37 @@ nav {
 }
 
 
+/* sponsore section */
+
+.sponsor-section {
+    text-align: center;
+    margin: 70px 0;
+}
+
+.sponsor-content {
+    max-width: 540px;
+    margin: 40px auto;
+}
+
+.sponsor-box {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    width: 80%;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.sponsor-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.sponsor-icon {
+    filter: grayscale(1);
+    width: 120px;
+}
+
 
 /* Responsive Media Query */
 
@@ -230,6 +261,14 @@ nav {
         width: 100%;
         text-align: center;
     }
+
+    /* sponsor section */
+
+    .sponsor-box {
+        grid-template-columns: repeat(1, auto);
+        gap: 40px;
+        justify-content: center;
+    }
     
 }
 
@@ -249,6 +288,12 @@ nav {
     .fact-box {
         grid-template-columns: repeat(2, auto);
         gap: 20px;
+        justify-content: center;
+    }
+
+    .sponsor-box {
+        grid-template-columns: repeat(3, auto);
+        gap: 40px;
         justify-content: center;
     }
 }
